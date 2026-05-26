@@ -1,0 +1,61 @@
+{
+  "name": "MenuItem",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Naziv koktela"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "signature",
+        "classic",
+        "mocktail",
+        "shots",
+        "wine_spirits"
+      ],
+      "default": "signature",
+      "description": "Kategorija pi\u0107a"
+    },
+    "description": {
+      "type": "string",
+      "description": "Kratki opis koktela"
+    },
+    "ingredients": {
+      "type": "string",
+      "description": "Sastojci odvojeni zarezom"
+    },
+    "price": {
+      "type": "number",
+      "description": "Cena u dinarima"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL slike koktela"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Da li je istaknuti koktel"
+    },
+    "is_available": {
+      "type": "boolean",
+      "default": true
+    },
+    "alcohol_content": {
+      "type": "string",
+      "enum": [
+        "alcoholic",
+        "non_alcoholic",
+        "low_alcohol"
+      ],
+      "default": "alcoholic"
+    }
+  },
+  "required": [
+    "name",
+    "price",
+    "category"
+  ]
+}

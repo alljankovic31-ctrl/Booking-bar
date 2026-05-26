@@ -1,0 +1,50 @@
+{
+  "name": "VenueTable",
+  "type": "object",
+  "properties": {
+    "table_id": {
+      "type": "string",
+      "description": "Unique table identifier like S1, SP1"
+    },
+    "zone": {
+      "type": "string",
+      "enum": [
+        "sank",
+        "sprat"
+      ],
+      "description": "\u0160ank or Sprat zone"
+    },
+    "capacity": {
+      "type": "number"
+    },
+    "minimum_spend": {
+      "type": "number"
+    },
+    "is_vip": {
+      "type": "boolean",
+      "default": false
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "available",
+        "reserved",
+        "occupied"
+      ],
+      "default": "available"
+    },
+    "position_x": {
+      "type": "number",
+      "description": "X position on venue map (percentage)"
+    },
+    "position_y": {
+      "type": "number",
+      "description": "Y position on venue map (percentage)"
+    }
+  },
+  "required": [
+    "table_id",
+    "zone",
+    "capacity"
+  ]
+}

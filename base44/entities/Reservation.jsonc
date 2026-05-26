@@ -1,0 +1,69 @@
+{
+  "name": "Reservation",
+  "type": "object",
+  "properties": {
+    "guest_name": {
+      "type": "string",
+      "description": "Name of the guest"
+    },
+    "email": {
+      "type": "string",
+      "description": "Guest email"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Guest phone number"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Reservation date"
+    },
+    "time": {
+      "type": "string",
+      "description": "Reservation time"
+    },
+    "party_size": {
+      "type": "number",
+      "description": "Number of guests"
+    },
+    "table_id": {
+      "type": "string",
+      "description": "Selected table identifier"
+    },
+    "table_zone": {
+      "type": "string",
+      "enum": [
+        "sank",
+        "sprat"
+      ],
+      "description": "Zone: \u0160ank or Sprat"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "cancelled",
+        "completed"
+      ],
+      "default": "pending"
+    },
+    "special_requests": {
+      "type": "string"
+    },
+    "is_vip": {
+      "type": "boolean",
+      "default": false
+    },
+    "minimum_spend": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "guest_name",
+    "phone",
+    "date",
+    "table_id"
+  ]
+}

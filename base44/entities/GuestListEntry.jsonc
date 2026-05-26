@@ -1,0 +1,37 @@
+{
+  "name": "GuestListEntry",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "number_of_guests": {
+      "type": "number"
+    },
+    "preferred_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "denied"
+      ],
+      "default": "pending"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "phone",
+    "number_of_guests",
+    "preferred_date"
+  ]
+}
