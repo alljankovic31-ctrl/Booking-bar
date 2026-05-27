@@ -77,7 +77,7 @@ function App() {
     <AuthProvider>
       <LanguageProvider>
         <QueryClientProvider client={queryClientInstance}>
-          <Router>
+          <Router basename={import.meta.env.BASE_URL}>
             <AuthenticatedApp />
           </Router>
           <Toaster />
