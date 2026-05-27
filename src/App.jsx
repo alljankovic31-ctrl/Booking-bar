@@ -77,7 +77,7 @@ function App() {
     <AuthProvider>
       <LanguageProvider>
         <QueryClientProvider client={queryClientInstance}>
-          <Router basename={import.meta.env.BASE_URL}>
+          <Router basename={import.meta.env.BASE_URL.replace(/\/$/, "")}>
             <AuthenticatedApp />
           </Router>
           <Toaster />
